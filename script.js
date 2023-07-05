@@ -24,7 +24,7 @@ function board(){
             for (let j = 0; j < columns; j++) {
                 index = "a" + (i + 1) + (j + 1);
                 order++;
-                let item = `<div><input type=\"text\" id="${index}" onblur="arrayPush(${order}, ${index}); checkItems(${index})"></div>`
+                let item = `<div><input type=\"text\" id="${index}" onblur="arrayPush(${order}, ${index}); checkItems(${index})" autocomplete="off"></div>`
                 array.push(index)
                 matrix.innerHTML += item ;
                 
