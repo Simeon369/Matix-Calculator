@@ -145,3 +145,9 @@ li{
     display: none;
 }
 
+@media screen and (min-width: 00px) {
+    .container{
+        padding: 0 15px;
+    }
+}
+
