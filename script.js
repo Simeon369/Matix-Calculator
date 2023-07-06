@@ -464,10 +464,15 @@ function step2(){
     document.getElementById('answer').appendChild(element)
 
     let buttons = document.getElementsByTagName('button')
+    
   
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.display = 'none' 
+
+        if (buttons[i].id == 'clear') {
+            buttons[i].style.display = 'block'
+        }
     }
 
     
