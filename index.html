@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="head"><h1>Simeon's Matrix Calculator</h1></div>
+        <div class="head">
+            <h1>Simeon's Matrix Calculator</h1>
+            
+        </div>
         <div class="dimensions">
             <form action="">
                 <ul>
@@ -44,8 +47,8 @@
             </div>
         </div>
         <div class="footer">
-            <button onclick="fine(0)">Addition</button>
-            <button onclick="fine(1)">Subtraction</button>
+            <button onclick="fine(0)" id="addition">Addition</button>
+            <button onclick="fine(1)" id="subtraction">Subtraction</button>
             <button id="multiplication" onclick="fine(2)">Multiplication</button>
             <button id="resultButton" onclick="step2()">Result</button>
             <button id="clear" onclick="window.location.reload()">Clear</button>

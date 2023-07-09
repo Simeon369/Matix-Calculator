@@ -2,7 +2,7 @@
 
 
 
-let array = ['a11', 'a12', 'a21', 'a22'];
+let array = [0, 0, 0, 0];
 let finalResult = []
 let matA = []
 let matB = []
@@ -25,7 +25,7 @@ function board(){
                 index = "a" + (i + 1) + (j + 1);
                 order++;
                 let item = `<div><input type=\"text\" id="${index}" onblur="arrayPush(${order}, ${index}); checkItems(${index})" autocomplete="off"></div>`
-                array.push(index)
+                array.push(0)
                 matrix.innerHTML += item ;
                 
             
@@ -102,8 +102,6 @@ function checkItems(e){
         alert("Enter a number")
         e.value = ""
     }
-
-    
 
 }
 
@@ -277,8 +275,11 @@ function multiplication1() {
 
     document.getElementById("rows").value = columns
     document.getElementById("rows").readOnly = true
+    document.getElementById("columns").readOnly = false
 
     document.getElementById('multiplication').remove()
+    document.getElementById('addition').remove()
+    document.getElementById('subtraction').remove()
     
     function splitArray(arr, chunkSize){
         let result = [];
@@ -400,6 +401,10 @@ function step1(e){
     operation.appendChild(element)
     operation.appendChild(sign)
 
+    document.getElementById("rows").readOnly = true
+    document.getElementById("columns").readOnly = true
+    document.getElementById('multiplication').style.display = 'none'
+
     if (e == 2) {
         multiplication1()
     }else{
@@ -409,15 +414,17 @@ function step1(e){
         }
         
         else{
+            
             for (let i = 0; i < finalResult.length; i++) {
                 if (e == 0) {
                     finalResult[i] += array[i]
+
                 }
                 if (e == 1) {
                     finalResult[i] -= array[i]
                 }
             }   
-                
+            
             
         }
     }
