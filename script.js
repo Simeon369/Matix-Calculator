@@ -121,12 +121,18 @@ function result(){
 
 function scalar(){
     let multiplier = prompt("Enter a multiplier: ")
-    for (let i = 0; i < array.length; i++) {
-        array[i] *= multiplier
-        
+    
+    if (multiplier == "" || multiplier == null) {
+        scalar()
+    }else{
+        console.log(multiplier)
+        for (let i = 0; i < array.length; i++) {
+            array[i] *= multiplier
+            
+        }
+        result()
+        console.log(array)
     }
-    result()
-    console.log(array)
 }
 
 function transpose(){
