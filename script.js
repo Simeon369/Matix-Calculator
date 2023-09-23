@@ -131,7 +131,6 @@ function scalar(){
             
         }
         result()
-        console.log(array)
     }
 }
 
